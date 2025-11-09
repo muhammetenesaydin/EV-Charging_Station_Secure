@@ -1,0 +1,54 @@
+# Makine Öğrenmesi Araştırması - Abdülkerim
+
+## 1. Görev ve Amaç
+Bu çalışma, proje için anomali tespiti amacıyla uygun makine öğrenmesi modellerini araştırmak içindir.
+Hedef: 7 (Aşırı Yüksek Bağlantı Sayısı) ve 8 (“Hayalet” Ölçüm Değişimi) anomalileri için model önerisi yapmak ve uygulanma fikri sunmak.
+
+## 2. Önerilen Modeller
+1. **Isolation Forest**
+   - Neden: Kullanımı kolay, etiketli veri gerektirmez (unsupervised), anomali tespitte başarılıdır.
+   - Artıları: Hızlı, parametreleri az, küçük veri setlerinde çalışır.
+   - Eksileri: Çok karmaşık korelasyonları yakalamada sınırlı olabilir.
+
+2. **One-Class SVM**
+   - Neden: Sadece normal veriyi öğrenip dışarıda kalanları anomali sayar.
+   - Artıları: Küçük veri ile çalışabilir, farklı kernel'ler denenebilir.
+   - Eksileri: Parametre ayarı zor, büyük veri için yavaş.
+
+3. **Autoencoder (Basit Neural Network)**
+   - Neden: Normal veriyi sıkıştırıp tekrar üretir; büyük hata verenler anomali sayılır.
+   - Artıları: Karmaşık örüntüleri yakalayabilir.
+   - Eksileri: Veri miktarı ve hesaplama gerektirir, daha fazla tuning lazım.
+
+**Öneri (hızlı ve pratike uygun):** İlk adımda **Isolation Forest** ile başlanması mantıklı. Sonrasında kaynak/ayırım gerekirse Autoencoder denenebilir.
+
+## 3. Veri Gereksinimi ve Hazırlık
+- **Gerekli veriler:** CAN frame zaman damgası, CAN ID, payload (ör. enerji ölçümü), OCPP bağlantı sayısı/time-window, vs.
+- **Örnek feature set (7 ve 8 için):**
+  - Her dakika gelen yeni WebSocket bağlantı sayısı (feature)
+  - Son N dakikadaki ortalama bağlantı sayısı, max, std
+  - MeterValues arasındaki delta (kWh farkı)
+  - Bir önceki ölçüm ile fark / zaman farkı
+- **Temizlik:** Null değerleri doldur, zaman damgalarını eşitle, outlier'lar için clipping/flagging.
+
+## 4. Eğitim & Değerlendirme (basit plan)
+- **Aşama 1 (Baseline):** Isolation Forest ile anomali puanı üret. Eşik (threshold) belirle (ör: contamination=0.01).
+- **Aşama 2 (İleri):** Eğer labeled veri varsa F1-score, Precision, Recall hesapla.
+- **Aşama 3 (Gelişmiş):** Autoencoder ile reconstruction error kullanılabilir.
+
+**Metrikler:** Precision, Recall, F1 (etiket varsa). Eğer etiket yoksa: alarm oranı / manuel inceleme öner.
+
+## 5. Önerilen Adımlar (kısa yapılacaklar listesi)
+1. Mevcut simülasyon loglarını toplamak (CSV/JSON). (Enes / Emre ile konuş)
+2. Örnek feature'ları oluşturup küçük bir dataset hazırlamak.
+3. Basit Isolation Forest denemesi (Python - scikit-learn).
+4. Sonuçları raporla ve eğer gerekirse Autoencoder önerisi yap.
+
+## 6. Kaynaklar / Referanslar
+- Isolation Forest - scikit-learn dokümantasyonu
+- One-Class SVM - scikit-learn
+- Autoencoder - temel kaynaklar (keras/tensorflow örnekleri)
+
+---
+
+Yukarıdaki adımları uygulayıp küçük bir deneme çalışması yapıp sonuçları buraya eklemeyi öneriyorum.
