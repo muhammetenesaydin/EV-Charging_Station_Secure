@@ -1,47 +1,47 @@
-🚀 CAN ↔ OCPP Anomali Tespit & Simülasyon Projesi
-Eğitim, PoC, araştırma ve demo amaçlı olarak hazırlanmış; yalnızca yazılım tabanlı 
-(vcan0 + OCPP/WebSocket) çalışan anomaly simulation & detection framework’ü.
-Bu proje ile CAN trafiği, OCPP mesajları ve gateway davranışı üzerinde 
-10 kritik saldırı/anomali senaryosunu gerçek zamanlı olarak simüle edebilirve basit bir 
-IDS (Intrusion Detection System) ile tespit edebilirsin.
+# 🚀 CAN ↔ OCPP Anomali Tespiti ve Simülasyonu Projesi  
+**Bir Yazılım Tabanlı Laboratuvar Çerçevesi**
 
+Bu proje, **şarj istasyonu ağ geçitleri** (gateway) üzerinde **CAN ↔ OCPP** iletişimini hedefleyen siber tehditleri araştırmak, simüle etmek ve basit bir **Intrusion Detection System** (IDS) ile tespit etmek amacıyla geliştirilmiştir. Eğitim, kavram kanıtı (Proof of Concept), araştırma ve demo senaryoları için idealdir.
 
-📦 İçerik10 farklı CAN ↔ OCPP anomali senaryosuFrekans, içerik, korelasyon, replay 
-ve delay tabanlı tespit kuralları.Tamamen yazılım tabanlı laboratuvar
-IDS pseudo-code
+> ⚙️ **Tamamen yazılım tabanlıdır**: Gerçek donanım yerine `vcan0` sanal CAN arayüzü ve OCPP WebSocket bağlantısı kullanılır.
 
+---
 
+## 🎯 Projenin Amacı
 
-🧩 Projenin AmacıBu proje, öğrenme ve PoC süreçlerinde aşağıdaki davranışları test etmek
-için hazırlanmıştır:
-CAN → OCPP mesaj eşleşmeleriOCPP → CAN zamanlama analizleriReplay, delta jump, rate spike 
-gibi anormalliklerWhitelist, HMAC, sequence, correlation gibi savunma yöntemleri
+Bu simülasyon çerçevesi, aşağıdaki güvenlik ve davranışsal analiz senaryolarını test etmek için tasarlanmıştır:
 
+- **CAN ↔ OCPP mesaj eşleşmeleri** (ör. CAN ID → OCPP StartTransaction)  
+- **Zamanlama analizleri** (OCPP komutundan CAN tepkisine kadar geçen süre)  
+- **Anormal trafik davranışları**: Replay, delta sıçramaları, frekans patlamaları  
+- **Savunma stratejileri**: Whitelist doğrulama, HMAC, mesaj sıralaması, korelasyon tabanlı kurallar  
 
-🔥 Simüle Edilen 10 Anomali
-IDSenaryoAçıklama
-0x9FF Frequency Spike Trafikte olmayan ID’nin aniden artması
-2OCPP → CAN DelayRemoteStart → 0x200 arasındaki gecikme
-Out-of-Range Payloadmax_current = 255 gibi uç değer
-MeterValues Rate Doubling1 Hz olan trafiğin 2 Hz’e çıkması
-OCPP Dışı StartCAN üzerinden izinsiz Start komutu
-0x301 Error BurstÇok hızlı hata mesajı yağmuru
-WebSocket FloodÇok sayıda yeni WS bağlantısı
-Hayalet ÖlçümBir anda anormal ölçüm değişimi
-Firmware MismatchWhitelist dışı firmwareVersion
-Replay AttackAynı ID+payload tekrar tekrar geliyor
+---
 
+## 🔥 Simüle Edilen 10 Kritik Anomali Senaryosu
 
-🛠️ Test Ortamı Gereksinimleri
-Linux (Ubuntu önerilir)
-vcan kernel modülü
-can-utils (cansend, candump)
-Python:
-  python-can
-  websockets
-  ocpp
-  
-⚙️ vcan0 Kurulum
-sudo modprobe vcan
-sudo ip link add dev vcan0 type vcan
-sudo ip link set up vcan0
+| ID | Senaryo                         | Açıklama |
+|----|----------------------------------|---------|
+| 1  | **Frequency Spike**             | Trafikte normalde görünmeyen bir CAN IDʼnin (ör. `0x9FF`) ani ve aşırı sıklıkta gönderilmesi |
+| 2  | **OCPP → CAN Delay**            | `RemoteStartTransaction` sonrası `0x200` IDʼli CAN mesajının normalden çok daha geç gelmesi |
+| 3  | **Out-of-Range Payload**        | `max_current = 255 A` gibi mantıksız/fiziksel olarak imkânsız değerlerin gönderilmesi |
+| 4  | **MeterValues Rate Doubling**   | Normalde 1 Hz olan ölçüm mesajlarının aniden 2 Hzʼe çıkarılması |
+| 5  | **OCPP Dışı Start**             | CAN hattı üzerinden doğrudan başlatma komutu gönderilmesi (OCPP onayı olmadan) |
+| 6  | **Error Burst**                 | `0x301` hata mesajının çok kısa sürede tekrar tekrar gönderilmesi |
+| 7  | **WebSocket Flood**             | Çok sayıda yeni OCPP WebSocket bağlantısının kısa sürede açılması |
+| 8  | **Hayalet Ölçüm**               | `MeterValues` içinde anormal, ani enerji tüketimi sıçraması (ör. 0 → 50 kWh/saniye) |
+| 9  | **Firmware Mismatch**           | Gateway’de tanımlı olmayan `firmwareVersion` ile OCPP mesajı gönderilmesi |
+| 10 | **Replay Attack**               | Aynı CAN ID + payload kombinasyonunun tekrar tekrar gönderilmesi |
+
+---
+
+## 🛠️ Kurulum & Gereksinimler
+
+### Sistem
+- Linux (Ubuntu 20.04+/22.04 önerilir)
+- `vcan` kernel modülü
+- `can-utils` paketi
+
+### Python Paketleri
+```bash
+pip install python-can websockets ocpp
