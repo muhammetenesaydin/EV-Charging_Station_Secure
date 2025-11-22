@@ -37,7 +37,8 @@ Bu simülasyon çerçevesi, aşağıdaki güvenlik ve davranışsal analiz senar
 | 10 | **Replay Attack**               | Aynı CAN ID + payload kombinasyonunun tekrar tekrar gönderilmesi |
 
 ---
-
+![CAN-OCPP Gateway Mimarisi](assets/2.png)
+---
 ## 🛠️ Kurulum & Gereksinimler
 
 ### Sistem
