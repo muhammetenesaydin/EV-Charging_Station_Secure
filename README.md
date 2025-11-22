@@ -1,15 +1,21 @@
 🚀 CAN ↔ OCPP Anomali Tespit & Simülasyon Projesi
-Eğitim, PoC, araştırma ve demo amaçlı olarak hazırlanmış; yalnızca yazılım tabanlı (vcan0 + OCPP/WebSocket) çalışan anomaly simulation & detection framework’ü.
-Bu proje ile CAN trafiği, OCPP mesajları ve gateway davranışı üzerinde 10 kritik saldırı/anomali senaryosunu gerçek zamanlı olarak simüle edebilirve basit bir 
+Eğitim, PoC, araştırma ve demo amaçlı olarak hazırlanmış; yalnızca yazılım tabanlı 
+(vcan0 + OCPP/WebSocket) çalışan anomaly simulation & detection framework’ü.
+Bu proje ile CAN trafiği, OCPP mesajları ve gateway davranışı üzerinde 
+10 kritik saldırı/anomali senaryosunu gerçek zamanlı olarak simüle edebilirve basit bir 
 IDS (Intrusion Detection System) ile tespit edebilirsin.
 
 
-📦 İçerik10 farklı CAN ↔ OCPP anomali senaryosuFrekans, içerik, korelasyon, replay ve delay tabanlı tespit kuralları.
-Tamamen yazılım tabanlı laboratuvarIDS pseudo-codeSWOT analizi ve yapılabilir öneriler
+📦 İçerik10 farklı CAN ↔ OCPP anomali senaryosuFrekans, içerik, korelasyon, replay 
+ve delay tabanlı tespit kuralları.Tamamen yazılım tabanlı laboratuvar
+IDS pseudo-code
 
 
-🧩 Projenin AmacıBu proje, öğrenme ve PoC süreçlerinde aşağıdaki davranışları test etmek için hazırlanmıştır:
-CAN → OCPP mesaj eşleşmeleriOCPP → CAN zamanlama analizleriReplay, delta jump, rate spike gibi anormalliklerWhitelist, HMAC, sequence, correlation gibi savunma yöntemleri
+
+🧩 Projenin AmacıBu proje, öğrenme ve PoC süreçlerinde aşağıdaki davranışları test etmek
+için hazırlanmıştır:
+CAN → OCPP mesaj eşleşmeleriOCPP → CAN zamanlama analizleriReplay, delta jump, rate spike 
+gibi anormalliklerWhitelist, HMAC, sequence, correlation gibi savunma yöntemleri
 
 
 🔥 Simüle Edilen 10 Anomali
