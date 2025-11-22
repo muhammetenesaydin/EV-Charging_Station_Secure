@@ -17,7 +17,7 @@ Bu simülasyon çerçevesi, aşağıdaki güvenlik ve davranışsal analiz senar
 - **Savunma stratejileri**: Whitelist doğrulama, HMAC, mesaj sıralaması, korelasyon tabanlı kurallar  
 
 ---
-![CAN-OCPP Gateway Mimarisi](assets/occp_can_gantt.png)
+![CAN-OCPP Gateway Mimarisi](assets/ocpp_can_gant.png)
 ---
 
 
