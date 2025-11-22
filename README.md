@@ -56,11 +56,11 @@ pip install python-can websockets ocpp
 ```
 
 ### Ekip Üyeleri
--230541102 Muhammet Enes AYDIN
--230541146 Emre AŞKIN
--230541074 Anıl Gökhan YILMAZ
--230541120 Ömer Yiğit AVŞAR
--230541052 Muhammed Fatih SALTAN
+- 230541102 Muhammet Enes AYDIN
+- 230541146 Emre AŞKIN
+- 230541074 Anıl Gökhan YILMAZ
+- 230541120 Ömer Yiğit AVŞAR
+- 230541052 Muhammed Fatih SALTAN
 - Linux (Ubuntu 20.04+/22.04 önerilir)
 - `vcan` kernel modülü
 - `can-utils` paketi
