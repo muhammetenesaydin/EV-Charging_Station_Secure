@@ -17,6 +17,9 @@ Bu simülasyon çerçevesi, aşağıdaki güvenlik ve davranışsal analiz senar
 - **Savunma stratejileri**: Whitelist doğrulama, HMAC, mesaj sıralaması, korelasyon tabanlı kurallar  
 
 ---
+![CAN-OCPP Gateway Mimarisi](assets/occp_can_gantt.png)
+---
+
 
 ## 🔥 Simüle Edilen 10 Kritik Anomali Senaryosu
 
@@ -45,3 +48,15 @@ Bu simülasyon çerçevesi, aşağıdaki güvenlik ve davranışsal analiz senar
 ### Python Paketleri
 ```bash
 pip install python-can websockets ocpp
+```
+
+### Ekip Üyeleri
+230541102 Muhammet Enes AYDIN
+230541146 Emre AŞKIN
+230541074 Anıl Gökhan YILMAZ
+230541120 Ömer Yiğit AVŞAR
+230541052 Muhammed Fatih SALTAN
+
+
+
+
