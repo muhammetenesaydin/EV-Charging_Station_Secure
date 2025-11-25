@@ -1,5 +1,7 @@
 # CAN Bus Payload Anomali Simülasyonu
 
+230541089 MUHAMMET HASAN UYAR
+
 Bu proje, elektrikli araç (EV) ile şarj istasyonu arasındaki CAN Bus trafiğinde payload temelli anomali tespitini (Man-in-the-Middle senaryosu) kural tabanlı bir IDS mantığı ile simüle eder ve görselleştirir.
 
 ## 🚀 Özellikler
