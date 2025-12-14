@@ -59,6 +59,7 @@ pip install python-can websockets ocpp
 - 230541102 Muhammet Enes AYDIN
 - 230541146 Emre AŞKIN
 - 230541074 Anıl Gökhan YILMAZ
+- 230541052 Muhammed Fatih Saltan
 - 230541120 Ömer Yiğit AVŞAR
 - 230541052 Muhammed Fatih SALTAN
 - 220541601 Abdulkarim haj amin
