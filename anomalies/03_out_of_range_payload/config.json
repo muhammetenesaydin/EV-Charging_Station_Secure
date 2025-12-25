@@ -1,0 +1,12 @@
+{
+    "anomaly_id": 3,
+    "name": "Out-of-Range Payload",
+    "can_id": "0x400",
+    "parameter": "current",
+    "attack_value": 255,
+    "valid_range": [
+        0,
+        80
+    ],
+    "description": "Sends CAN messages with physically impossible values"
+}

@@ -1,0 +1,9 @@
+{
+    "anomaly_id": 6,
+    "name": "Error Burst",
+    "can_id": "0x301",
+    "burst_count": 50,
+    "burst_duration": 1.0,
+    "threshold": 10,
+    "description": "Floods CAN bus with error messages in short time"
+}

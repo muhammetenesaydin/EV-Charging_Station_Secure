@@ -1,0 +1,9 @@
+{
+    "anomaly_id": 4,
+    "name": "MeterValues Rate Doubling",
+    "normal_rate_hz": 1.0,
+    "attack_rate_hz": 2.0,
+    "tolerance": 0.2,
+    "duration_seconds": 10,
+    "description": "Doubles the frequency of MeterValues messages"
+}

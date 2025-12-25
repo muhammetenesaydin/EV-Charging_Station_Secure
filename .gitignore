@@ -1,0 +1,6 @@
+# Sanal ortam klasörünü (gereksiz) yoksay
+ocpp-env/
+
+# Python cache dosyalarını yoksay
+__pycache__/
+*.pyc

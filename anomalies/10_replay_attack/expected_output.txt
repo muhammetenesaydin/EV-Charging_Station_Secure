@@ -1,0 +1,2 @@
+⚠️  ANOMALİ 10: Tekrar saldırısı tespit edildi - CAN ID 0x200 payload [01020304] 5 kez görüldü
+🚨 GÜVENLİK YANITI TETİKLENDİ 🚨

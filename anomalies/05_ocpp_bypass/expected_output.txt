@@ -1,0 +1,3 @@
+⚠️  ANOMALİ 5: Yetkisiz CAN komutu - 0x200 OCPP yetkilendirmesi olmadan gönderildi
+🚨 GÜVENLİK YANITI TETİKLENDİ 🚨
+Anomali Türü: OCPP Bypass

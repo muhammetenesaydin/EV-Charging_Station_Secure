@@ -1,0 +1,2 @@
+⚠️  ANOMALİ 8: Anormal energy delta - 50.0 kWh/s (eşik: 5.0 kWh/s)
+🚨 GÜVENLİK YANITI TETİKLENDİ 🚨

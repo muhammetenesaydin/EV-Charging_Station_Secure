@@ -1,0 +1,9 @@
+{
+    "anomaly_id": 7,
+    "name": "WebSocket Flood",
+    "connection_count": 100,
+    "duration_seconds": 5,
+    "threshold": 10,
+    "server_url": "ws://localhost:9000",
+    "description": "Opens many WebSocket connections in short time"
+}

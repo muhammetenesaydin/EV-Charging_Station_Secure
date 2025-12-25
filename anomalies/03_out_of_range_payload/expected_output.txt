@@ -1,0 +1,1 @@
+⚠️  ANOMALY 3: Out-of-range value detected - current: 255 (valid range: 0-80)

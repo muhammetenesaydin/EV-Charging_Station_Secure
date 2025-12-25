@@ -1,0 +1,1 @@
+⚠️  ANOMALY 2: Abnormal delay detected - OCPP → CAN 0x200: 10.0s (threshold: 2.0s)

@@ -1,0 +1,2 @@
+⚠️  ANOMALİ 6: Mesaj patlaması tespit edildi - ID 0x301: 50 mesaj 1.0s içinde (eşik: 10)
+🚨 GÜVENLİK YANITI TETİKLENDİ 🚨

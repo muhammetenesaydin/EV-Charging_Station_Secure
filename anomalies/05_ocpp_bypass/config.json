@@ -1,0 +1,7 @@
+{
+    "anomaly_id": 5,
+    "name": "OCPP Bypass",
+    "can_id": "0x200",
+    "authorization_timeout": 5,
+    "description": "Sends CAN start command without OCPP authorization"
+}

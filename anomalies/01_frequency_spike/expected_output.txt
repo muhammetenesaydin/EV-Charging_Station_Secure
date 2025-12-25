@@ -1,0 +1,8 @@
+⚠️  ANOMALY 1: Frequency spike detected on CAN ID 0x9FF - 100.0 msg/s (threshold: 20.0 msg/s)
+
+🚨 SECURITY RESPONSE TRIGGERED 🚨
+Anomaly Type: Frequency Spike
+Details: CAN ID 0x9FF
+Response #1
+
+[SECURITY] Safe mode command sent to CAN bus (ID: 0x001)

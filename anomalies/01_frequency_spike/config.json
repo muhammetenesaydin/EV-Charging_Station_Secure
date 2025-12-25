@@ -1,0 +1,9 @@
+{
+  "anomaly_id": 1,
+  "name": "Frequency Spike",
+  "can_id": "0x9FF",
+  "frequency_hz": 100,
+  "duration_seconds": 5,
+  "threshold_hz": 20,
+  "description": "Floods CAN bus with abnormally high frequency messages"
+}

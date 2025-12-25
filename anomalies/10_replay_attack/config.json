@@ -1,0 +1,15 @@
+{
+    "anomaly_id": 10,
+    "name": "Replay Attack",
+    "can_id": "0x200",
+    "payload": [
+        1,
+        2,
+        3,
+        4
+    ],
+    "replay_count": 5,
+    "interval_seconds": 2,
+    "threshold": 3,
+    "description": "Replays same CAN message multiple times"
+}

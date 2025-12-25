@@ -1,0 +1,8 @@
+{
+    "anomaly_id": 8,
+    "name": "Ghost Measurement",
+    "initial_energy": 1000,
+    "ghost_jump": 50000,
+    "threshold_per_second": 5000,
+    "description": "Sudden impossible energy value jump"
+}

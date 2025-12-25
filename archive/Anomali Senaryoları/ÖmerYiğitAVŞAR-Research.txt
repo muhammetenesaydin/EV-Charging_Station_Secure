@@ -1,0 +1,73 @@
+Makine Öğrenmesi Araştırması - Ömer Yiğit AVŞAR
+
+1. Giriş
+
+Bu çalışmada, elektrikli araç şarj istasyonlarında meydana gelebilecek anormal davranışların tespit edilmesi amaçlanmıştır. Şarj istasyonları, ağ üzerinden sürekli iletişim halinde olduğundan, saldırılara veya hatalı çalışmalara açık sistemlerdir. Projede, ekip arkadaşlarım tarafından çeşitli anomali senaryoları simüle edilmiş ve bu senaryolardan elde edilen log verileri üzerinde makine öğrenmesi tabanlı anomali tespiti gerçekleştirilmiştir.
+Benim görevim, makine öğrenmesi modelinin araştırılması ve uygulanmasıdır.
+
+2. Makine Öğrenmesi Modeli Seçimi
+
+Anomali tespiti problemi, birçok durumda etiketli veri içermediği için denetimsiz öğrenme yöntemleri tercih edilir. Bu nedenle proje kapsamında kullanılan model:
+
+Isolation Forest (İzolasyon Ormanı)
+
+Modelin Mantığı:
+
+Isolation Forest modeli, veri noktalarını rastgele bölerek ayırır. Normal veriler çok benzer gruplar içinde olduğu için daha geç ayrılırken,
+anomaliler diğerlerinden farklı oldukları için çok daha hızlı izole edilir.
+Bu yaklaşım, modeli doğrudan anomalileri işaretlemeye uygun hale getirir.
+
+Modelin Avantajları:
+
+Etiketli veri gerektirmez → Denetimsiz öğrenme
+
+Büyük veri kümelerinde dahi hızlı çalışır
+
+Karmaşık dağılımları otomatik olarak yakalar
+
+3. Veri Hazırlama Süreci
+
+Simülasyon ortamında üretilen veriler senaryo bazlıdır. Her senaryo, farklı bir anormal durumun sistemde nasıl davranış oluşturduğunu gösterir.
+Veriler modele verilmeden önce:
+
+Sayısal özellikler ölçeklendirildi (StandardScaler)
+
+Model için gerekli giriş matrisi hazırlandı
+
+Model üzerinde fit ve predict işlemleri uygulandı
+
+4. Modelin Uygulanması ve Sonuçlar
+
+Model çalıştırıldıktan sonra her senaryo için kaç adet anomalinin tespit edildiği aşağıda özetlenmiştir:
+
+Senaryo	Tespit Edilen Anomali Sayısı
+Senaryo 1	38
+Senaryo 2	26
+Senaryo 3	24
+Senaryo 4	53
+Senaryo 5	59
+Senaryo 6	41
+Senaryo 7	51
+Senaryo 8	40
+Senaryo 9	35
+Senaryo 10	32
+
+Bu sonuçlar, farklı senaryoların sistemde farklı düzeylerde etkiler oluşturduğunu göstermektedir. Bazı durumlarda anomali yoğunluğu daha yüksek iken, bazı senaryolarda sistem daha stabil davranmıştır.
+
+5. Değerlendirme
+
+Model, simülasyon verileri üzerinde başarıyla anomalileri tespit etmiştir.
+Özellikle çok bağlantılı saldırı ve kimlik sahtekarlığı senaryolarında modelin tepkisi belirgin şekilde yüksek çıkmıştır.
+Gelecek aşamada:
+
+Veri miktarı artırılarak model daha kapsamlı eğitilebilir,
+
+İhtiyaç halinde Autoencoder gibi daha gelişmiş modeller kullanılabilir,
+
+Gerçek saha verileri toplanarak model kalibrasyonu yapılabilir.
+
+6. Sonuç
+
+Bu çalışma sonucunda, şarj istasyonlarında oluşabilecek olağan dışı davranışların makine öğrenmesi ile otomatik olarak tespit edilebileceği gösterilmiştir.
+Isolation Forest modeli, veriye etiketsiz bir şekilde uygulanabildiği için projeye uygun bir çözüm üretmiştir.
+Anomali tespiti, sistem güvenliği ve servis sürekliliği için kritik öneme sahiptir ve bu çalışma ileride geliştirilebilecek uygulamalar için temel oluşturmaktadır.

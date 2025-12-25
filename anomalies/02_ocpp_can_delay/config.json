@@ -1,0 +1,9 @@
+{
+    "anomaly_id": 2,
+    "name": "OCPP to CAN Delay",
+    "expected_can_id": "0x200",
+    "normal_delay_seconds": 0.5,
+    "attack_delay_seconds": 10.0,
+    "threshold_seconds": 2.0,
+    "description": "Introduces abnormal delay between OCPP command and CAN response"
+}

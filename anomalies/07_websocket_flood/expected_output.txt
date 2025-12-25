@@ -1,0 +1,2 @@
+⚠️  ANOMALİ 7: WebSocket seli tespit edildi - 100 bağlantı 5s içinde (eşik: 10)
+🚨 GÜVENLİK YANITI TETİKLENDİ 🚨

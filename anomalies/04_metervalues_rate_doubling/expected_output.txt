@@ -1,0 +1,1 @@
+⚠️  ANOMALİ 4: Frekans anomalisi tespit edildi - MeterValues: 2.0 Hz (beklenen: 1.0 Hz ±%20)

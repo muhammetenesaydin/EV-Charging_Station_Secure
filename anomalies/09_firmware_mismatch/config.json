@@ -1,0 +1,11 @@
+{
+    "anomaly_id": 9,
+    "name": "Firmware Mismatch",
+    "malicious_firmware": "evil-v9",
+    "allowed_versions": [
+        "v1.5-stable",
+        "v1.6-release",
+        "v2.0.1-prod"
+    ],
+    "description": "Attempts to connect with unauthorized firmware version"
+}
