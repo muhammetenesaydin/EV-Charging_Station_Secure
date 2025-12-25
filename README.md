@@ -29,6 +29,10 @@ Bu çerçeve ile yapabilecekleriniz:
 - ✅ **Yeni tespit yöntemleri** geliştirin
 
 ---
+---
+![CAN-OCPP Gateway Mimarisi](assets/gant.png)
+---
+
 
 ## ⚡ Hızlı Başlangıç
 
