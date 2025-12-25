@@ -29,7 +29,6 @@ Bu çerçeve ile yapabilecekleriniz:
 - ✅ **Yeni tespit yöntemleri** geliştirin
 
 ---
----
 ![CAN-OCPP Gateway Mimarisi](assets/gant.png)
 ---
 
@@ -147,6 +146,8 @@ pip install -r requirements.txt
 
 Detaylı kurulum için: [docs/SETUP.md](docs/SETUP.md)
 
+---
+![CAN-OCPP Gateway Mimarisi](assets/4.png)
 ---
 
 ## 📖 Kullanım
