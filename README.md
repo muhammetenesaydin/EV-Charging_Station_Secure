@@ -371,11 +371,13 @@ Her anomali için `anomalies/XX_*/README.md` dosyasında:
 
 ## 🤝 Ekip Üyeleri
 
+
 - 230541102 Muhammet Enes AYDIN
 - 230541146 Emre AŞKIN
 - 230541074 Anıl Gökhan YILMAZ
-- 230541052 Muhammed Fatih SALTAN
+- 230541052 Muhammed Fatih Saltan
 - 230541120 Ömer Yiğit AVŞAR
+- 230541052 Muhammed Fatih SALTAN
 - 220541601 Abdulkarim haj amin
 - 230541089 Muhammet Hasan UYAR
 - 240541164 Sabri Baz
@@ -435,15 +437,3 @@ Sorunlar veya sorular için:
 **Başarılar! 🎉**
 
 Detaylı kullanım talimatları için [RUNBOOK](docs/RUNBOOK.md) dosyasını okuyun.
-
-### Ekip Üyeleri
-- 230541102 Muhammet Enes AYDIN
-- 230541146 Emre AŞKIN
-- 230541074 Anıl Gökhan YILMAZ
-- 230541052 Muhammed Fatih Saltan
-- 230541120 Ömer Yiğit AVŞAR
-- 230541052 Muhammed Fatih SALTAN
-- 220541601 Abdulkarim haj amin
-- 230541089 Muhammet Hasan UYAR
-- 240541164 Sabri Baz
-
